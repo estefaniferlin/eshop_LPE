@@ -10,31 +10,200 @@
 			"name": "get categorias",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getProdutos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add produto",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"codigo\":5,\"nome\":\"Teste\",\"descricao\":\"Teste\",\"quantidade_estoque\":10,\"ativo\":true,\"valor\":\"120.00\",\"data_cadastro\":\"2024-03-20T03:00:00.000Z\",\"categoria\":1}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update produto",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\" : 1,\r\n    \"nome\" : \"Teste\",\r\n    \"descricao\":\"Teste\",\r\n    \"quantidade_estoque\":10,\r\n    \"ativo\":true,\r\n    \"valor\":\"120.00\",\r\n    \"data_cadastro\":\"2024-03-20T03:00:00.000Z\",\r\n    \"categoria\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/produto",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete produto",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto/4",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get produto por codigo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/produto/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"produto",
+						"1"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "add categoria",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"nome\":\"teste inserir categoria\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "update categoria",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"codigo\" : 1,\r\n    \"nome\" : \"Teste\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3002/categoria",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "delete categoria",
 			"request": {
-				"method": "GET",
-				"header": []
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"2"
+					]
+				}
 			},
 			"response": []
 		},
@@ -42,7 +211,18 @@
 			"name": "get categoria por codigo",
 			"request": {
 				"method": "GET",
-				"header": []
+				"header": [],
+				"url": {
+					"raw": "localhost:3002/categoria/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3002",
+					"path": [
+						"categoria",
+						"1"
+					]
+				}
 			},
 			"response": []
 		}
