@@ -1,15 +1,16 @@
 const { Router } = require('express');
+const { verificaJWT } = require('../controllers/segurancaController');
 const { getCategorias, addCategoria, updateCategoria, deleteCategoria, getCategoriaPorCodigo } = require('../controllers/categoriaController');
 
 const rotasCategorias = new Router();
 
 rotasCategorias.route('/categoria')
-    .get(getCategorias)
-    .post(addCategoria)
-    .put(updateCategoria)
+    .get(verificaJWT, getCategorias)
+    .post(verificaJWT, addCategoria)
+    .put(verificaJWT, updateCategoria)
 
 rotasCategorias.route('/categoria/:codigo')
-    .get(getCategoriaPorCodigo)
-    .delete(deleteCategoria)
+    .get(verificaJWT, getCategoriaPorCodigo)
+    .delete(verificaJWT, deleteCategoria)
 
 module.exports = { rotasCategorias };
